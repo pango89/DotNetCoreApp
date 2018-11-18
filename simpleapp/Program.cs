@@ -7,7 +7,7 @@ namespace simpleapp
     {
         public static void Main(string[] args)
         {
-            const string defaultMessage = "Hello World!!";
+            const string defaultMessage = "Please provide valid numbers for addition !!!";
 
             if (args == null || !args.Any())
             {
@@ -15,13 +15,11 @@ namespace simpleapp
             }
             else
             {
-                foreach (var arg in args)
-                {
-                    Console.WriteLine("Hello " + arg + "!!");
-                }
+                var sum = args.Sum(Convert.ToInt32);
+                Console.WriteLine("Total Sum = " + sum);
             }
 
-            Console.WriteLine(GetBot());
+            // Console.WriteLine(GetBot());
             Console.Read();
         }
 
